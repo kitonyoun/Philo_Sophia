@@ -18,7 +18,16 @@
 
 ## 設計書
 ER図
-<https://app.diagrams.net/#G1nOOkkcAmx8-g6tj8OWKP7vAjWZdzxjtU>
+<https://drive.google.com/file/d/1nOOkkcAmx8-g6tj8OWKP7vAjWZdzxjtU/view?usp=sharing>
+画面遷移図
+<https://drive.google.com/file/d/1dOr59tKFOgbR21sotNW2gy1DLhKHVE9l/view?usp=sharing>
+ワイヤーフレーム
+<https://drive.google.com/file/d/1FtJLKmZTrcwemQt3v9_M8zFD57EheNi_/view?usp=sharing>
+テーブル定義書
+<https://docs.google.com/spreadsheets/d/1d912Wk8EhK123dGjf0jcrT1a_rt-pWvSaeK-k_bvn58/edit?usp=sharing>
+アプリケーション詳細設計書
+<https://docs.google.com/spreadsheets/d/1DtjCZTPEayBnkuppIbcFb0uKwclabEwBOn17KLYUuPc/edit?usp=sharing>
+
 ### 機能一覧
 <https://docs.google.com/spreadsheets/d/12lIGrUOvMFQbh_hTtS8aOWgUYYp0Cf2M97mrDsWzABg/edit#gid=0>
 
