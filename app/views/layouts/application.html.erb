@@ -10,6 +10,55 @@
   </head>
 
   <body>
+    <header>
+      <div class="container">
+        <!-- userログイン後ヘッダー -->
+        <% if user_signed_in? %>
+          <nav>
+            <ul class="nav navbar-nav navbar-left">
+              <li class="nav-item">
+                <%= link_to "ふぃろSophia", root_path %>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li class="nav-item">
+                <%= link_to "about", questionnaires_about_path %>
+              </li>
+              <li class="nav-item">
+                <%= link_to "マイページ", user_path %>
+              </li>
+              <li class="nav-item">
+                <%= link_to "リクエスト", results_path %>
+              </li>
+              <li class="nav-item">
+                <%= link_to "ログアウト", destroy_user_session_path %>
+              </li>
+            </ul>
+          </nav>
+
+        <% else %>
+        <!-- userログイン前ヘッダー -->
+          <nav>
+            <ul class="nav navbar-nav navbar-left">
+              <li class="nav-item">
+                <%= link_to "ふぃろSophia", root_path %>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li class="nav-item">
+                <%= link_to "about", questionnaires_about_path %>
+              </li>
+              <li class="nav-item">
+                <%= link_to "新規登録", new_user_registration_path %>
+              </li>
+              <li class="nav-item">
+                <%= link_to "ログイン", new_user_session_path %>
+              </li>
+            </ul>
+          </nav>
+        <% end %>
+      </div>
+    </header>
     <%= yield %>
   </body>
 </html>

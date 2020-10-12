@@ -1,2 +1,32 @@
-<h1>Questionnaires#top</h1>
-<p>Find me in app/views/questionnaires/top.html.erb</p>
+<div class="row">
+
+<!--   ログイン後のみリクエスト作成を表示 -->
+  <% if user_signed_in? %>
+    <div class="request-create-icon">
+      質問紙作成はこちら<br>
+      <%= link_to "リクエスト作成", requests_path %>
+    </div>
+  <% end %>
+
+<!-- ログイン前でも表示される  -->
+  <div class="title_box">
+    <h3 class="Menu">アンケート一覧</h3>
+  </div>
+
+  <table class="table">
+  	<thead>
+  	  <tr>
+  	  	<th>質問タイトル</th>
+  	  	<th>リクエストID</th>
+  	  	<th>アンケート期日</th>
+  	  </tr>
+  	</thead>
+  	<tbody>
+  		<% @requests.each do |request| %>
+	  	  <tr></tr>
+	  	  <tr></tr>
+	  	  <tr></tr>
+  		<% end %>
+  	</tbody>
+  </table>
+</div>
