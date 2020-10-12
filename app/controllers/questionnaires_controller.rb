@@ -1,8 +1,6 @@
 class QuestionnairesController < ApplicationController
   def top
-  end
-
-  def about
+    @requests = Request.all
   end
 
   def create
@@ -11,6 +9,9 @@ class QuestionnairesController < ApplicationController
   def confirm
   end
 
-  def thanks
+  private
+  def questionnaire_params
+    params.require(:questionnaire).permit(:request_id, :gender, :age)
   end
+
 end

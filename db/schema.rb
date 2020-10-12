@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_10_100205) do
+ActiveRecord::Schema.define(version: 2020_10_12_125355) do
 
   create_table "questionnaires", force: :cascade do |t|
     t.integer "request_id"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2020_10_10_100205) do
     t.date "cutoff_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.date "cutoff_date_end"
   end
 
   create_table "results", force: :cascade do |t|

@@ -11,11 +11,6 @@
     <%= f.password_field :password, autocomplete: "current-password" %>
   </div>
 
-  <div class="actions">
-    <%= f.submit "Log in", class: "btn btn-primary" %>
-  </div>
-<% end %>
-
 <%= render "devise/shared/links" %>
 
   <% if devise_mapping.rememberable? -%>
@@ -35,3 +30,4 @@
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
   <%= link_to "新規登録こちらは", new_registration_path(resource_name) %><br />
 <% end %>
+
