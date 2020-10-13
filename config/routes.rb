@@ -3,10 +3,9 @@ Rails.application.routes.draw do
 
   root "questionnaires#top"
   get "questionnaires/about" => "questionnaires#about", as: 'questionnaires_about'
-  patch "users/unsubscribe" => "users#unsubscribe", as: 'users_unsubscribe'
   get "users/withdrow" => "users#withdraw", as: 'users_withdraw'
-  resources :users, only: [:edit, :update, :show]
-  resources :requests, only: [:create, :destroy]
+  resources :users, only: [:edit, :update, :show, :destroy]
+  resources :requests, only: [:new, :create, :destroy]
   resources :questionnaires, only: [:create]
   resources :results, only: [:index, :show]
 
