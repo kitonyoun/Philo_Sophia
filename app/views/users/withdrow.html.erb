@@ -1,2 +1,11 @@
-<h1>Users#withdrow</h1>
-<p>Find me in app/views/users/withdrow.html.erb</p>
+<div class="container">
+  <div class="row">
+  	<div class="col-lg-12">
+  	  <h2 class="title">本当に退会しますか？</h2>
+  	  <p>退会すると登録情報、<br>
+  	  実施リクエスト履歴が閲覧できなくなります。</p>
+  	  <%= link_to "退会しない", user_path(current_user.id), class: "btn btn-primary" %>
+  	  <%= link_to "退会する", root_path, method: :delete, "data-confirm" => "本当に退会しますか？", class: "btn btn-danger" %>
+  	</div>
+  </div>
+</div>
