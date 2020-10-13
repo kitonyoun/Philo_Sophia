@@ -1,2 +1,31 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <h2 class="Menu">マイページ</h2>
+        <main>
+          <%= link_to "編集する",edit_user_path(@user), class: "btn btn-success" %>
+          <%= link_to "パスワードを変更する", edit_user_registration_path, class: "btn btn-primary" %>
+          <table class="table_user_show">
+          	<tr class="table-border">
+          	  <td class="active">氏名</td>
+          	  <td>
+          	    <%= @user.last_name %>
+          	    <%= @user.first_name %>
+          	  </td>
+          	</tr>
+          	<tr class="table-border">
+          	  <td class="active">メールアドレス</td>
+          	  <td><%= @user.email %></td>
+          	</tr>
+          </table>
+        </main>
+    </div>
+  </div>
+
+  <div class="offset-sm-1 col-sm-3">
+    <div class="row">
+      <p>実施リクエスト</p>
+      <p><%= link_to "一覧を見る", results_path, class: "btn btn-default" %></p>
+    </div>
+  </div>
+</div>
