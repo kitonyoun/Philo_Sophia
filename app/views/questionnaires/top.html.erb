@@ -3,9 +3,9 @@
 
   <!--   ログイン後のみリクエスト作成を表示 -->
     <% if user_signed_in? %>
-      <div class="request-create-icon">
+      <div class="request-create-nav">
         質問紙作成はこちら<br>
-        <%= link_to "リクエスト作成", new_request_path %>
+        <div class= "request-create-icon"><%= link_to "リクエスト作成", new_request_path %></div>
       </div>
     <% end %>
 
