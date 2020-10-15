@@ -5,6 +5,9 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <meta name="description" content="論文作成のためのアンケートサイト">
+
+<!-- css -->
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -16,7 +19,7 @@
         <% if user_signed_in? %>
           <nav>
             <ul class="nav navbar-nav navbar-left">
-              <li class="nav-item">
+              <li class="nav-logo">
                 <%= link_to "ふぃろSophia", root_path %>
               </li>
             </ul>
@@ -40,7 +43,7 @@
         <!-- userログイン前ヘッダー -->
           <nav>
             <ul class="nav navbar-nav navbar-left">
-              <li class="nav-item">
+              <li class="nav-logo">
                 <%= link_to "ふぃろSophia", root_path %>
               </li>
             </ul>
@@ -59,6 +62,6 @@
         <% end %>
       </div>
     </header>
-    <%= yield %>
+      <%= yield %>
   </body>
 </html>
