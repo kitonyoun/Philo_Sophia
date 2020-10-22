@@ -1,1 +1,42 @@
-request#new
+<div class="container">
+  <div class="row">
+  	<h3>リクエスト作成</h3>
+    <main>
+      <%= form_with(model: @request, local: true) do |f| %>
+      <div class="col-md-6 field">
+        <%= f.label :リクエストタイトル %>
+        <%= f.text_field :request_title, autofocus: true %>
+      </div>
+      <div class="col-md-3 field">
+      	<%= f.label :期日の開始日 %>
+      	<%= date_field_tag 'request[start_on]', nil %>
+      </div>
+      <div class="col-md-3 field">
+      	<%= f.label :期日の終了日 %>
+      	<%= date_field_tag 'request[end_on]', nil %>
+      </div>
+      <div class="col-md-12 tag-area">
+      	<%= f.fields_for :tags do |tag| %>
+        <div class="js-file-group" data-index="${index}" >
+           <div class="tag-area_title">
+            質問内容
+           </div>
+           <div class="tag-area_form">
+            <input class="question_box" type="text" name="request[tags_attributes][${index}][content]" id="reqest_tags_attributes_${index}_content">
+            <span class="delete-form-btn">
+              削除する
+            </span>
+            <input class="add-form-btn" onclick="function(add)">
+              追加する
+            </>
+           </div>
+          </div>
+        </div>
+      <% end %>
+      <div class="action">
+        <%= f.submit "作成する" %>
+      </div>
+      <% end %>
+    </main>
+  </div>
+</div>
