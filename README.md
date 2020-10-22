@@ -43,4 +43,4 @@ ER図
 - 使用しない場合は、使用素材の項目をREADMEから削除してください。# Philo_Sophia
 
 shutterstock
-<https://www.shutterstock.com/ja/image-photo/glitter-vintage-lights-background-gold-silver-435339904>
+<https://www.shutterstock.com/ja/>
