@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_12_125355) do
+ActiveRecord::Schema.define(version: 2020_10_15_060512) do
 
   create_table "questionnaires", force: :cascade do |t|
     t.integer "request_id"
@@ -24,11 +24,11 @@ ActiveRecord::Schema.define(version: 2020_10_12_125355) do
     t.integer "user_id"
     t.string "request_title"
     t.text "question_box"
-    t.integer "answer_box_type"
-    t.date "cutoff_date"
+    t.integer "answer_box_type", default: 0
+    t.date "start_on"
+    t.date "end_on"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.date "cutoff_date_end"
   end
 
   create_table "results", force: :cascade do |t|
@@ -38,6 +38,14 @@ ActiveRecord::Schema.define(version: 2020_10_12_125355) do
     t.integer "respondent"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.string "content", null: false
+    t.integer "request_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["request_id"], name: "index_tags_on_request_id"
   end
 
   create_table "users", force: :cascade do |t|
