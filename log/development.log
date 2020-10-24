@@ -2087,3 +2087,228 @@ Processing by QuestionnairesController#top as HTML
 Completed 200 OK in 1693ms (Views: 1686.9ms | ActiveRecord: 1.6ms)
 
 
+Started GET "/" for 10.0.2.2 at 2020-10-24 06:15:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by QuestionnairesController#top as HTML
+  Rendering questionnaires/top.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/questionnaires/top.html.erb:5
+  [1m[36mRequest Load (0.7ms)[0m  [1m[34mSELECT "requests".* FROM "requests"[0m
+  ↳ app/views/questionnaires/top.html.erb:26
+  Rendered questionnaires/top.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 1321ms (Views: 1300.6ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2020-10-24 06:16:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.6ms)
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (46.5ms)
+Completed 200 OK in 134ms (Views: 132.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 10.0.2.2 at 2020-10-24 06:16:32 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aZrltaob6XE3+LhA09jaQe1VTj8WtlBNR7hDJytXJKB4AgIcMTOWAhBfM9iqz+3CX4fSSr26yepY3ARcqL/rxw==", "user"=>{"last_name"=>"qq", "first_name"=>"qq", "email"=>"qq@qq", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"新規登録"}
+Unpermitted parameters: :last_name, :first_name
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "qq@qq"], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (4.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (7.6ms)
+Completed 500 Internal Server Error in 335ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `downcace' for "User":String
+Did you mean?  downcase
+               downcase!):
+    4:       <%= I18n.t("errors.messages.not_saved",
+    5:       	          count: resource.errors.count,
+    6:       	          resource: resource.class.model_name.human.
+    7:       	          downcace)
+    8:       %>
+    9:     </h2>
+   10:     <ul>
+  
+app/views/devise/shared/_error_messages.html.erb:7:in `_app_views_devise_shared__error_messages_html_erb___1916680677329030677_70250733999820'
+app/views/devise/registrations/new.html.erb:4:in `block in _app_views_devise_registrations_new_html_erb__2199669246623454166_70250733937200'
+app/views/devise/registrations/new.html.erb:3:in `_app_views_devise_registrations_new_html_erb__2199669246623454166_70250733937200'
+Started GET "/users/sign_up" for 10.0.2.2 at 2020-10-24 06:18:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.9ms)
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 128ms (Views: 126.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 10.0.2.2 at 2020-10-24 06:18:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/rdNJyeDDtkNmrgtIUgszqqdj3l1YaCC9YxHKMa4tJiAK52tiS1AQ8Qu/3uj1APy6kehu8sFoMB+fvrF7ernxg==", "user"=>{"last_name"=>"qq", "first_name"=>"qq", "email"=>"qq@qq", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"新規登録"}
+Unpermitted parameters: :last_name, :first_name
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "qq@qq"], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (4.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (9.4ms)
+Completed 500 Internal Server Error in 325ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `downcace!' for "User":String
+Did you mean?  downcase!
+               downcase):
+    4:       <%= I18n.t("errors.messages.not_saved",
+    5:       	          count: resource.errors.count,
+    6:       	          resource: resource.class.model_name.human.
+    7:       	          downcace!)
+    8:       %>
+    9:     </h2>
+   10:     <ul>
+  
+app/views/devise/shared/_error_messages.html.erb:7:in `_app_views_devise_shared__error_messages_html_erb___1916680677329030677_70250735330180'
+app/views/devise/registrations/new.html.erb:4:in `block in _app_views_devise_registrations_new_html_erb__2199669246623454166_70250735439520'
+app/views/devise/registrations/new.html.erb:3:in `_app_views_devise_registrations_new_html_erb__2199669246623454166_70250735439520'
+Started GET "/users/sign_up" for 10.0.2.2 at 2020-10-24 06:22:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.6ms)
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 140ms (Views: 138.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 10.0.2.2 at 2020-10-24 06:22:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FpSPJVqbB/YHjSoiFqiGhByAGX1fUDWHoItk30GU+bZoCF+v9DVJbM45bXSUNKm4XFo3v+E0NcUredkyasaq6A==", "user"=>{"last_name"=>"qq", "first_name"=>"qq", "email"=>"qq@qq", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"新規登録"}
+Unpermitted parameters: :last_name, :first_name
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "qq@qq"], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (5.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (9.1ms)
+Completed 500 Internal Server Error in 325ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `downcace' for "User":String
+Did you mean?  downcase
+               downcase!):
+    3:     <h2>
+    4:       <%= I18n.t("errors.messages.not_saved",
+    5:       	          count: resource.errors.count,
+    6:       	          resource: resource.class.model_name.human.downcace)
+    7:       %>
+    8:     </h2>
+    9:     <ul>
+  
+app/views/devise/shared/_error_messages.html.erb:6:in `_app_views_devise_shared__error_messages_html_erb___1916680677329030677_70250737333960'
+app/views/devise/registrations/new.html.erb:4:in `block in _app_views_devise_registrations_new_html_erb__2199669246623454166_70250737467900'
+app/views/devise/registrations/new.html.erb:3:in `_app_views_devise_registrations_new_html_erb__2199669246623454166_70250737467900'
+Started GET "/users/sign_up" for 10.0.2.2 at 2020-10-24 06:26:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.7ms)
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 139ms (Views: 136.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 10.0.2.2 at 2020-10-24 06:26:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BJ4D7M/toZ98GT7OFbLKASpCL9k/xYP4ZO5eEqjE5i16AtNmYUPvBbWteZiXLuU9apgBG4Ghg7rvHOP/g5a1cw==", "user"=>{"last_name"=>"ww", "first_name"=>"ww", "email"=>"ww@ww", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"新規登録"}
+Unpermitted parameters: :last_name, :first_name
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ww@ww"], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (2.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "ww@ww"], ["encrypted_password", "$2a$12$dgNM0PdabDddSs5caXu5/O10ZSpl.jocyRJLY4e5Wo2ChmniibNvS"], ["created_at", "2020-10-24 06:26:49.260685"], ["updated_at", "2020-10-24 06:26:49.260685"]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 322ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-10-24 06:26:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionnairesController#top as HTML
+  Rendering questionnaires/top.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/questionnaires/top.html.erb:5
+  [1m[36mRequest Load (0.8ms)[0m  [1m[34mSELECT "requests".* FROM "requests"[0m
+  ↳ app/views/questionnaires/top.html.erb:26
+  Rendered questionnaires/top.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 109ms (Views: 102.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/requests/new" for 10.0.2.2 at 2020-10-24 06:26:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RequestsController#new as HTML
+  Rendering requests/new.html.erb within layouts/application
+  Rendered requests/new.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:19
+Completed 200 OK in 102ms (Views: 91.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-10-24 06:32:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by QuestionnairesController#top as HTML
+  Rendering questionnaires/top.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/questionnaires/top.html.erb:5
+  [1m[36mRequest Load (0.8ms)[0m  [1m[34mSELECT "requests".* FROM "requests"[0m
+  ↳ app/views/questionnaires/top.html.erb:26
+  Rendered questionnaires/top.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 680ms (Views: 662.1ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/requests/new" for 10.0.2.2 at 2020-10-24 06:32:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RequestsController#new as HTML
+  Rendering requests/new.html.erb within layouts/application
+  Rendered requests/new.html.erb within layouts/application (14.4ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:19
+Completed 200 OK in 110ms (Views: 98.0ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/requests" for 10.0.2.2 at 2020-10-24 06:33:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RequestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qDfMfUbLIN/cBrboflWZJKbVsp582IHlFHn7KiHcf6QswMdE16wVOLjAeerGUkd6HQtmUcN16y1y64oCbTI3Kg==", "request"=>{"request_title"=>"aa", "start_on"=>"2020-10-25", "end_on"=>"2020-10-26", "tags_attributes"=>{"${index}"=>{"content"=>"aaaaaa"}}}, "commit"=>"作成する"}
+Unpermitted parameter: :tags_attributes
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'start_on' for Request.):
+  
+app/controllers/requests_controller.rb:8:in `create'

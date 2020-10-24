@@ -5,7 +5,7 @@ class RequestsController < ApplicationController
   end
 
   def create
-  	@request = Request.new
+  	@request = Request.new(request_params)
   	sabun = (@request.start_on - Date.today).to_i
   	unless sabun >= 1
   	  flash[:error] = "開始日は明日以降でお願いします"
@@ -24,6 +24,9 @@ class RequestsController < ApplicationController
       redirect_to new_request_path
   	  return
   	end
+    @request.save
+    redirect_to_root_path
+
   end
 
   def confirm
