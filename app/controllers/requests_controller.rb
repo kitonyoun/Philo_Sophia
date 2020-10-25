@@ -5,25 +5,27 @@ class RequestsController < ApplicationController
   end
 
   def create
-  	@request = Request.new
+  	@request = Request.new(request_params)
   	sabun = (@request.start_on - Date.today).to_i
   	unless sabun >= 1
   	  flash[:error] = "開始日は明日以降でお願いします"
-      redirect_to new_request_path
+      redirect_to new_request_path(user_id)
   	  return
   	end
 
   	sabun = (@request.end_on - @request.start_on).to_i
   	unless sabun <= 30
   	  flash[:error] = "期間は最長30日間まで"
-  	  redirect_to new_request_path
+  	  redirect_to new_request_path(user_id)
   	  return
   	end
   	unless sabun >= 0
   	  flash[:error] = "終了日は開始日以降です"
-      redirect_to new_request_path
+      redirect_to new_request_path(user_id)
   	  return
   	end
+    @request.save
+    redirect_to root_path(user_id)
   end
 
   def confirm
